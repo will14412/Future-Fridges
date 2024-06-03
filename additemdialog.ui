@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddItemDialog</class>
+ <widget class="QDialog" name="AddItemDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>319</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#AddItemDialog {
+	background-color: #7fcdee;
+}
+
+QLabel {
+	color: #07407b;
+}
+
+#mainWidget QLabel {
+	color: #ffffff;
+	font-size: 14px;
+	font-style: italic;
+}
+
+QLineEdit {
+	border: 2.5px solid #f7931e;
+	border-radius: 5px;
+	padding: 7px 20px;
+}
+
+QSpinBox {
+	border: 2.5px solid #f7931e;
+	border-radius: 5px;
+	padding: 7px 20px;
+}
+
+QSpinBox::up-button {
+	subcontrol-origin: border;
+	subcontrol-position: top right;
+	width: 40px;
+	height: 18px;
+}
+
+QSpinBox::down-button {
+	subcontrol-origin: border;
+	subcontrol-position: bottom right;
+	width: 40px;
+	height: 18px;
+}
+
+QComboBox {
+    border: 2.5px solid #f7931e;
+    border-radius: 5px;
+    padding: 7px 20px;
+}
+
+QComboBox::drop-down {
+	subcontrol-origin: border;
+	subcontrol-position: bottom right;
+	width: 40px;
+	height: 18px;
+}
+
+QPushButton {
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #f7931e;
+	border-radius: 5px;
+	padding: 7px 20px;
+}
+
+QPushButton::hover {
+	color:  #f7931e;
+	font-weight: bold;
+	background-color: #ffffff;
+}
+
+#newStockLabel {
+	color: #07407b;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#mainWidget {
+	background-color: #07407b;
+	border: 2.5px solid #f7931e;
+	border-radius: 15px;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QLabel" name="newStockLabel">
+     <property name="text">
+      <string>New Stock</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="mainWidget" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="stockLabel">
+          <property name="text">
+           <string>Stock Name:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="stockLineEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="amountLabel">
+          <property name="text">
+           <string>Amount:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="metricLabel">
+          <property name="text">
+           <string>Metric:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="comboBoxMetrics">
+          <item>
+           <property name="text">
+            <string>grams</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>kilograms</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>millilitres</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>litres</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>count</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="dateLabel">
+          <property name="text">
+           <string>Expires In (days):</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QSpinBox" name="dateSpinBox">
+          <property name="maximum">
+           <number>365</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="amountSpinBox">
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="submit">
+        <property name="text">
+         <string>Submit</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cancel">
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

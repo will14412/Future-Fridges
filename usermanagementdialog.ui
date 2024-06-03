@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserManagementDialog</class>
+ <widget class="QDialog" name="UserManagementDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>420</width>
+    <height>396</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#UserManagementDialog {
+	background-color: #7fcdee;
+}
+
+QLabel {
+	color: #07407b;
+}
+
+#MainWidget QLabel {
+	color: #ffffff;
+	font-size: 14px;
+	font-style: italic;
+}
+
+QLineEdit {
+	border: 2.5px solid #f7931e;
+	border-radius: 5px;
+	padding: 7px 20px;
+}
+
+QSpinBox {
+	border: 2.5px solid #f7931e;
+	border-radius: 5px;
+	padding: 7px 20px;
+}
+
+QSpinBox::up-button {
+	subcontrol-origin: border;
+	subcontrol-position: top right;
+	width: 40px;
+	height: 18px;
+}
+
+QSpinBox::down-button {
+	subcontrol-origin: border;
+	subcontrol-position: bottom right;
+	width: 40px;
+	height: 18px;
+}
+
+QComboBox {
+    border: 2.5px solid #f7931e;
+    border-radius: 5px;
+    padding: 7px 20px;
+}
+
+QComboBox::drop-down {
+	subcontrol-origin: border;
+	subcontrol-position: bottom right;
+	width: 40px;
+	height: 18px;
+}
+
+QPushButton {
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #f7931e;
+	border-radius: 5px;
+	padding: 7px 20px;
+}
+
+QPushButton::hover {
+	color:  #f7931e;
+	font-weight: bold;
+	background-color: #ffffff;
+}
+
+#UserManagerLabel {
+	color: #07407b;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#MainWidget {
+	background-color: #07407b;
+	border: 2.5px solid #f7931e;
+	border-radius: 15px;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item alignment="Qt::AlignHCenter">
+    <widget class="QLabel" name="UserManagerLabel">
+     <property name="text">
+      <string>User Manager</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="MainWidget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>200</height>
+      </size>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="NewDriverLabel">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Enter New Driver Email:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="NewDriverLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="SubmitNewDriverButton">
+        <property name="text">
+         <string>Submit New Driver</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="DriverLabel">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Enter Driver Email:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="DriverLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="RemoveDriverButton">
+        <property name="text">
+         <string>Remove Driver</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="UsernameLabel">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Enter Admin Username:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="UsernameLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="RemoveButton">
+        <property name="text">
+         <string>Remove Admin</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="CancelButton">
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DDWindow</class>
+ <widget class="QMainWindow" name="DDWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>756</width>
+    <height>534</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget {
+	background-color: #7fcdee;
+}
+
+QLabel {
+	color: #ffffff;
+}
+
+QSpinBox {
+	border: 2.5px solid #f7931e;
+	border-radius: 5px;
+	padding: 7px 20px;
+}
+
+QSpinBox::up-button {
+	subcontrol-origin: border;
+	subcontrol-position: top right;
+	width: 40px;
+	height: 18px;
+}
+
+QSpinBox::down-button {
+	subcontrol-origin: border;
+	subcontrol-position: bottom right;
+	width: 40px;
+	height: 18px;
+}
+
+QPushButton {
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #f7931e;
+	border-radius: 5px;
+	padding: 7px 20px;
+}
+
+
+QPushButton::hover {
+	color:  #f7931e;
+	font-weight: bold;
+	background-color: #ffffff;
+}
+
+#DDLabel {
+	color: #07407b;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#FoodStockList {
+	font-size: 16px;
+	background-color: #07407b;
+	border: 2.5px solid #f7931e;
+	border-radius: 15px;
+}
+
+#FoodStockList::item {
+	color: #ffffff;
+}
+
+#FoodStockList::item::selected {
+	color: #f7931e;
+}
+
+#SelectedLabel {
+	color: #07407b;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#EditBox {
+	background-color: #07407b;
+	border: 2.5px solid #f7931e;
+	border-radius: 15px;
+}
+
+#AddLabel {
+	font-size: 14px;
+	font-style: italic;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="Top">
+      <item>
+       <widget class="QLabel" name="DDLabel">
+        <property name="text">
+         <string>Delivery Driver Interface</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ChefSwitchButton">
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Switch to Chef</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="Middle">
+      <item>
+       <widget class="QListWidget" name="FoodStockList">
+        <item>
+         <property name="text">
+          <string>|     Item     |     Amount     |     Metric     |     Date     |</string>
+         </property>
+         <property name="font">
+          <font>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="SelectedLabel">
+      <property name="text">
+       <string>Currently Selected: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="EditBox" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="AddLabel">
+             <property name="text">
+              <string>Amount to Add:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="AddSpinBox"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="AddButton">
+             <property name="text">
+              <string>Enter</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>756</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
